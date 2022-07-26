@@ -11,4 +11,6 @@ a{
 a:visited{
   color: lightgrey;
 }
-
+a:hover , a:active{
+  color: #eee;
+}
