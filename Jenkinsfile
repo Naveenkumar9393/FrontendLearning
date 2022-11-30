@@ -6,8 +6,7 @@
 pipeline{
   agent any
   parmeters {
-    String(name: 'VERSION' , 
-    choices :['1.1.0' , '1.2.0'],
+    choices: ['1.1.0' , '1.2.0'],
     booleanParam(name: 'executeTests'),
     dafaultValue: true,
     description: 'version to deploy on prod')
