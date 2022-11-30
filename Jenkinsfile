@@ -3,12 +3,18 @@ pipeline {
     stages{
       stage("frontend") {
         steps {
-          echo 'Build the application'
+          echo 'Installing node js'
+          nodeJs('Node'){
+            sh 'yarn install'
+          }
         }
       }
       stage("Backend") {
         steps {
-          echo 'Test the application'
+          echo 'Installing gradle package ..'
+          withGradle(){
+            sh './gradlew -v'
+          }
         }
       }
     }
