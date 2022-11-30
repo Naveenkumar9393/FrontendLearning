@@ -12,9 +12,6 @@ pipeline {
       stage("Backend") {
         steps {
           echo 'Installing gradle package ..'
-          withGradle(){
-            echo 'Gradle version is ..'gradle --version
-          }
         }
       }
     }
