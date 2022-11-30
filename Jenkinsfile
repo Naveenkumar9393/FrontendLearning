@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 pipeline {
   agent any 
     stages{
@@ -13,11 +14,45 @@ pipeline {
         steps {
           echo 'Installing gradle package ..'
         }
+=======
+pipeline{
+  agent any
+  
+  stages {
+
+    stage("build"){
+
+      steps{
+        echo 'Build the application'
+>>>>>>> c74c7c2 (jenkins node update)
       }
+
     }
+<<<<<<< HEAD
   post {
     always{
       echo 'Build status'
     }
   }
 }
+=======
+    stage("Test"){
+
+      steps{
+        echo 'Test the application'
+      }
+      
+    }
+
+    stage("Deploy"){
+
+      steps{
+        echo 'Deploy the application'
+      }
+    
+    }
+
+  }
+
+}
+>>>>>>> c74c7c2 (jenkins node update)
