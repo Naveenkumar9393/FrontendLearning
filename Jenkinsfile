@@ -59,9 +59,9 @@ pipeline{
     }
   }
   post {
-    always {
+    //always {
        // This script executes always 
-    }
+    //}
     success {
       echo 'verify success is printed in post command'
     }
