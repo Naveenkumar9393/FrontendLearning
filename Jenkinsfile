@@ -3,10 +3,14 @@
 // expression {
 // BRANCH_NAME == 'dev' || CODE_CHANGES == true
 // }
+// environment {
+// NEW_VERSION ='1.1.0'
+// SERVER_CREDENTIALS = credentials('server-credentials')
+// }
 pipeline{
   agent any
   parmeters {
-    choice(name: 'VERSION', choices: ['1.1.0', '1.2.0','1.3.0'],description: ''),
+    choice(name: 'VERSION', choices: ['1.1.0', '1.2.0','1.3.0'],description: '')
     booleanParam(name: 'executeTests',dafaultValue: true,description: '')
   }
   tools {
