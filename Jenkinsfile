@@ -73,7 +73,7 @@
 // }
 pipeline{
   agent any
-  parmeters{
+  parameters{
     choice(name: 'VERSION', choices: ['1.1.0', '1.2.0','1.3.0'])
     // booleanParam(name: 'executeTests',dafaultValue: true)
   }
@@ -91,7 +91,7 @@ pipeline{
     stage("deploy"){
       steps{
         echo 'Deploying application ...'
-        // echo "Deployed version ${params.VERSION)"
+        echo "Deployed version ${params.VERSION)"
       }
     }
   }
