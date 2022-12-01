@@ -91,7 +91,8 @@ pipeline{
     stage("deploy"){
       steps{
         echo 'Deploying application ...'
-        // echo "Deployed version ${params.VERSION)"
+        echo "Deployed version ${params.VERSION)"
+        sh "mvn clean install"
       }
     }
   }
